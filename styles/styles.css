@@ -160,8 +160,19 @@ color: var(--primary-text-color);
 /*---------------Main-section--------------*/
 .main-section{
     padding: 200px 0;
-    background-color: #2F303A;
     text-align: center;
+    background-color:#C4C4C4;
+    background-image: linear-gradient(
+        to right, 
+        rgba(47, 48, 58, 0.4), 
+        rgba(47, 48, 58, 0.4)
+        ), 
+        url(/images/hero-img/bg_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
 }
  
 
@@ -225,6 +236,31 @@ background-color: #188CE8;
     margin-right: 30px;
 }
 
+.menu-adv-item::before {
+    display: block;
+    content: '';
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+}
+
+.icon-antenna::before {
+    background-image: url(../images/adv-icon/antenna.svg);
+}
+
+.icon-clock::before {
+    background-image: url(../images/adv-icon/clock.svg);
+}
+
+.icon-diagrama::before {
+    background-image: url(../images/adv-icon/diagram.svg);
+}
+
+.icon-astronaut::before {
+    background-image: url(../images/adv-icon/astronaut.svg);
+}
+
 .menu-adv-item:last-child {
     margin-right: 0;
 }
@@ -233,7 +269,6 @@ background-color: #188CE8;
     margin-top: 0;
     margin-bottom: 10px;
 font-weight: 700;
-font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
 margin-top: 0;
@@ -315,12 +350,18 @@ line-height: 1.18;
     color: var(--accent-color);
 }
 
+/* Regular customers */
+.client-list {
+    display: flex;
+}
+
 /*Footer*/
 
 .footer {
 background-color: #2F303A;
 padding: 60px 0;
 }
+
 
 .logo-footer {
     display: block;
@@ -356,6 +397,31 @@ color: var(--title-text-color);
 .dark:focus {
     color: var(--primary-text-color);
 }
+
+.join-social {
+    display: flex;
+}
+
+.join {
+    font-weight: 700;
+line-height: 1.14;
+text-transform: uppercase;
+color: var(--title-text-color);
+}
+
+.social_list {
+    display: flex;
+}
+
+.social-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #44454E;
+}
+
+
 
 /*Portfolio*/
 
