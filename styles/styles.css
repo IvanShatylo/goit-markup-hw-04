@@ -6,6 +6,7 @@ html {
     --primary-text-color: #2196F3;
     --title-text-color: #FFFFFF;
     --accent-color: #757575;
+    --icon-color: #AFB1B8;
 }
 
 h1,
@@ -150,11 +151,21 @@ font-weight: 500;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--accent-color);
+fill: var(--icon-color);
 }
 
 .contact-list:hover,
 .contact-list:focus {
 color: var(--primary-text-color);
+}
+
+.contact-icon {
+    margin-right: 10px;
+}
+
+.contact-icon:hover,
+.contact-icon:focus {
+    fill: var(--primary-text-color);
 }
 
 /*---------------Main-section--------------*/
@@ -236,34 +247,7 @@ background-color: #188CE8;
     margin-right: 30px;
 }
 
-.menu-adv-item::before {
-    display: block;
-    content: '';
-    height: 120px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
-}
 
-.icon-antenna::before {
-    background-image: url(../images/adv-icon/antenna.svg);
-}
-
-.icon-clock::before {
-    background-image: url(../images/adv-icon/clock.svg);
-}
-
-.icon-diagrama::before {
-    background-image: url(../images/adv-icon/diagram.svg);
-}
-
-.icon-astronaut::before {
-    background-image: url(../images/adv-icon/astronaut.svg);
-}
-
-.menu-adv-item:last-child {
-    margin-right: 0;
-}
 
 .menu-adv-list {
     margin-top: 0;
@@ -281,6 +265,24 @@ margin-bottom: 10;
     color: var(--accent-color);
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.adv-icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 120px;
+    
+  
+    background:#F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.adv-icon-item {
+    width: 70px;
+    height: 70px;
 }
 
 /*-----------------What are we doing-----------------*/
@@ -321,8 +323,8 @@ padding-right: 30px;
 
 .team-item {
     margin-right: 30px;
-    width: 270px;
-    height: 368px;
+    /* width: 270px;
+    height: 368px; */
     text-align: center;
     background: var(--title-text-color);
 
@@ -344,18 +346,76 @@ line-height: 1.18;
 }
 .team-position{
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     font-weight: 400;
     line-height: 1.71;
     color: var(--accent-color);
 }
 
-/* Regular customers */
-.client-list {
+.social_list-icon {
     display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0px;
+    padding-bottom: 30px;
 }
 
+.social_item-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.social-link-icon {
+    width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--icon-color);
+}
+
+.social-link-icon:hover,
+.social-link-icon:focus {
+  fill: var(--title-text-color);
+  background: var(--primary-text-color);
+}
+
+/* Regular customers */
+.client-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-list-item {
+  width: calc((100% - 150px) / 6);
+}
+
+.clients-link {
+  display: flex;
+  flex-wrap: wrap;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  align-content: center;
+  justify-content: center;
+  fill: var(--icon-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
+}
+
+
 /*Footer*/
+
+.div-footer {
+    display: flex;
+
+}
 
 .footer {
 background-color: #2F303A;
@@ -398,12 +458,14 @@ color: var(--title-text-color);
     color: var(--primary-text-color);
 }
 
+
 .join-social {
-    display: flex;
+    margin-left: 70px;
 }
 
-.join {
-    font-weight: 700;
+.social-title {
+    display: flex;
+    margin-bottom: 20px;
 line-height: 1.14;
 text-transform: uppercase;
 color: var(--title-text-color);
@@ -411,17 +473,37 @@ color: var(--title-text-color);
 
 .social_list {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   
 }
 
+.social-list-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #44454E;
+    flex-wrap: wrap;
+  }
+
 .social-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     background-color: #44454E;
 }
 
-
+.social-link:hover,
+.social-link:focus {
+  background: var(--primary-text-color);
+}
 
 /*Portfolio*/
 
